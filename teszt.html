@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceMC - Főoldal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icemc.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background: url('images/háttér.png') no-repeat center center fixed; /* Háttérkép */
+            background-size: cover;
+            height: 100%;
+            color: rgb(233, 233, 233);
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.767); /* Fekete áttetsző fejléc */
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #55a4ff;
+        }
+
+        .online-players {
+            color: #ff5555;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            padding: 15px 20px;
+            background-color: #55c9ff;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #ffffff8c;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: unset;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-download {
+            background-color: #ff5555;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #ffffff8c;
+        }
+
+        .btn-register {
+            background-color: rgb(0, 183, 255);
+            color: #ffffff;
+        }
+
+        .btn-register:hover {
+            background-color: #ffffff8c;
+        }
+        
+        .server-info {
+            background-color: #ffefdd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #000000
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            color: #ffffff;
+        }
+
+        .gomb {
+            text-align: center;
+            margin-top: 25px;
+            color:#ff5555
+        }
+
+        .gomb:hover {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .masolas {
+            padding: 25px;
+            color: #ff5555
+        }
+
+        .masolas:hover {
+            background-color: #ffffff8c
+        }
+
+        .hero-logo {
+            width: 300px; /* A logó szélessége, ezt igény szerint állíthatod */
+            margin-bottom: 20px; /* Távolság a logó és az IceMC cím között */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/icemc.png" alt="IceMC Logo"> <!-- Cseréld le a saját logódra -->
+        </div>
+        <div class="menu">
+            <a href="index.html">Kezdőlap</a>
+            <a href="join.html">Csatlakozás</a>
+            <a href="faq.html">GYIK</a>
+        </div>
+        <div>
+            <a href="https://icemchu.craftingstore.net" target="_blank">
+                <button class="btn login-btn">Bejelentkezés</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <img src="images/icemc.png" alt="IceMC Logo" class="hero-logo">
+
+    <h1>Töltsd le a kliensünket, és irány a végtelen kalandok 
+    <h1>  tárháza Magyarország legfeltörekvőbb szerverén!</h1>
+</div>
+
+<div class="gomb">
+        <a href="https://tlauncher.org/en/" target="_blank">
+            <button class="btn btn-download">Kliens letöltése</button>
+        </a>  
+        
+        <div class="content">
+            <h1>Üdvözlünk az IceMC-n!</h1>
+            <p>Az IceMC egy egyedülálló Minecraft szerver, amely az izgalmas jég birodalomba repít. Fedezd fel a végtelen fagyott világokat, harcolj a leghidegebb ellenségekkel, és építsd fel saját jégváradat! Csatlakozz hozzánk és tapasztald meg a jégkorszak valódi élményét!</p>
+            
+            <div class="server-info">
+                <h2>Szerver Információk:</h2>
+                <ul>
+                    <li>Verzió: 1.20.1</li>
+                    <li>Szerver IP: <strong id="server-ip">icemchun.funserver.top</strong></li>
+                    <li>Játékmódok: Survival, PvP, Minijátékok</li>
+                    <li><strong>Tagfelvétel: <ins>Jelenleg elérhető</ins></strong></li>
+                </ul>
+            </div>
+        <div class="gomb">  
+            <button class="btn" onclick="copyToClipboard()">Csatlakozz Most!</button>
+        </div>
+    
+        <script>
+            function copyToClipboard() {
+                // A szerver IP-címe, amit kimásolunk
+                const serverIP = document.getElementById('server-ip').textContent;
+                
+                // Létrehozunk egy ideiglenes textarea elemet a kimásoláshoz
+                const tempInput = document.createElement('textarea');
+                tempInput.value = serverIP;
+                document.body.appendChild(tempInput);
+                
+                // Kiválasztjuk és kimásoljuk az értéket
+                tempInput.select();
+                document.execCommand('copy');
+                
+                // Töröljük az ideiglenes textarea-t
+                document.body.removeChild(tempInput);
+                
+                // Visszajelzés a felhasználónak
+                alert('A szerver IP címe kimásolva: ' + serverIP);
+            }
+        </script>
+</body>
+</html>

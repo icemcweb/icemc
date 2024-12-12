@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceMC - Csatlakozás</title>
+    <link rel="icon" type="image/x-icon" href="images/icemc.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #000000;
+        }
+        header {
+            background-color: #00bfff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .step {
+            background-color: #e0f7fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077be;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #005f99;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IceMC - Csatlakozás</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="join.html">Csatlakozás</a></li>
+                <li><a href="faq.html">GYIK</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Hogyan csatlakozhatsz az IceMC-hez?</h1>
+        
+        <div class="step">
+            <h2>1. Töltsd le a Minecraftot</h2>
+            <p>Ha még nem rendelkezel a Minecraft játékkal, először le kell töltened és telepítened. <a href="https://www.minecraft.net/" target="_blank">Minecraft letöltése</a></p>
+        </div>
+        
+        <div class="step">
+            <h2>2. Indítsd el a játékot és adj meg szerver IP-t</h2>
+            <p>Nyisd meg a Minecraftot, válaszd a "Multiplayer" opciót, majd kattints a "Add Server" gombra. Írd be az IceMC szerver IP címét: <strong id="server-ip">icemchun.funserver.top</strong></p>
+        </div>
+
+        <div class="step">
+            <h2>3. Csatlakozz és játsz!</h2>
+            <p>Most már csak kattintanod kell a "Join Server" gombra, és kezdődhet a kaland!</p>
+            <button class="btn" onclick="copyToClipboard()">Szerver IP másolása</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            // A szerver IP-címe, amit kimásolunk
+            const serverIP = document.getElementById('server-ip').textContent;
+            
+            // Létrehozunk egy ideiglenes textarea elemet a kimásoláshoz
+            const tempInput = document.createElement('textarea');
+            tempInput.value = serverIP;
+            document.body.appendChild(tempInput);
+            
+            // Kiválasztjuk és kimásoljuk az értéket
+            tempInput.select();
+            document.execCommand('copy');
+            
+            // Töröljük az ideiglenes textarea-t
+            document.body.removeChild(tempInput);
+            
+            // Visszajelzés a felhasználónak
+            alert('A szerver IP címe kimásolva: ' + serverIP);
+        }
+    </script>
+</body>
+</html>

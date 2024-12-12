@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceMC - Gyakori Kérdések</title>
+    <link rel="icon" type="image/x-icon" href="images/icemc.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #00bfff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #000000;
+        }
+        .faq-section {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .faq {
+            margin-bottom: 20px;
+        }
+        .faq h2 {
+            cursor: pointer;
+            background-color: #0077be;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .faq p {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IceMC - Gyakori Kérdések</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="join.html">Csatlakozás</a></li>
+                <li><a href="faq.html">GYIK</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Gyakori Kérdések</h1>
+        <div class="faq-section">
+
+            <div class="faq">
+                <h2>1. Hogyan tudok csatlakozni az IceMC szerverhez?</h2>
+                <p>A csatlakozáshoz először telepítsd a Minecraftot, majd a multiplayer menüben add meg az IceMC szerver IP-címét: `play.icemc.hu`. Ezután kattints a "Join Server" gombra, és már bent is vagy!</p>
+            </div>
+
+            <div class="faq">
+                <h2>2. Milyen verzióval tudok játszani?</h2>
+                <p>Az IceMC szerver támogatja a Minecraft több verzióját is, de javasoljuk a legfrissebb verzió használatát, hogy teljes mértékben élvezhesd az új funkciókat.</p>
+            </div>
+
+            <div class="faq">
+                <h2>3. Hogyan vehetek részt a közösségi eseményeken?</h2>
+                <p>Kövesd a weboldalunkon található híreket és a Discord szerverünket, ahol rendszeresen értesítünk a közelgő eseményekről és versenyekről!</p>
+            </div>
+
+            <div class="faq">
+                <h2>4. Mi a teendő, ha problémám van?</h2>
+                <p>Ha technikai problémád van, lépj kapcsolatba az adminisztrátorokkal a <a href="contact.html">Kapcsolat</a> oldalon keresztül, vagy használd a Discord szerverünkön található támogatási csatornát.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // JavaScript a GYIK funkcióhoz (nyitás-zárás)
+        const faqs = document.querySelectorAll(".faq h2");
+
+        faqs.forEach(faq => {
+            faq.addEventListener("click", () => {
+                const answer = faq.nextElementSibling;
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
